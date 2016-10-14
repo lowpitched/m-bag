@@ -1,0 +1,84 @@
+<mbag>
+	<constant name="name" value="donkey" type="string"/>
+	<flows>
+		<flow  id="001" name="flow1" use="true">
+		<constant name="name" value="menglihao" type="string"/>
+		<node  name="com.mbag.test.MyNode1" class="com.mbag.test.MyNode1"  use="true"/>
+			<node  name="com.mbag.test.MyNode1" class="com.mbag.test.MyNode2"  use="true"/>	
+			<if class="com.mbag.test.IfTest" use="true">
+				<node  name="com.mbag.test.IfClassNode1" class="com.mbag.test.IfClassNode1"  use="true"/>
+				<node  name="com.mbag.test.IfClassNode2" class="com.mbag.test.IfClassNode2"  use="true"/>
+				
+			</if>
+			<node  name="com.mbag.test.MyNode2" class="com.mbag.test.MyNode2"  use="true"/>
+			<for class="com.mbag.test.ForTest">
+				<node  name="com.mbag.test.DefaultNode" class="com.mbag.test.DefaultNode"  use="true"/>
+				<node  name="com.mbag.test.IfClassNode1" class="com.mbag.test.IfClassNode1"  use="true"/>
+			</for>
+			<while class="com.mbag.test.WhileTest">
+				<node  name="com.mbag.test.DefaultNode" class="com.mbag.test.DefaultNode"  use="true"/>
+				<node  name="com.mbag.test.IfClassNode1" class="com.mbag.test.IfClassNode1"  use="true"/>
+			</while>
+			<!-- 
+			<thread pool="5">
+				<node  name="com.mbag.test.MyNode1" class="com.mbag.test.MyNode1"  use="true"/>
+				<node  name="com.mbag.test.MyNode1" class="com.mbag.test.MyNode2"  use="true"/>
+			</thread>
+			 -->
+		</flow>
+	</flows>
+</mbag>
+
+
+
+<!-- 
+<if class="com.mbag.test.IfTest" use="true">
+		<node  name="com.mbag.test.DefaultNode" class="com.mbag.test.DefaultNode"  use="true"/>
+</if>
+ -->
+
+<!-- 
+<mbag>
+	<flows use="true" name="mode1">
+		<flow id="001" name="flow1" use="true">
+		<node  name="com.mbag.test.MyNode1" class="com.mbag.test.MyNode1"  use="true"/>
+		<node  name="com.mbag.test.MyNode1" class="com.mbag.test.MyNode2"  use="true"/>
+		<if class="ifclass" use="true">
+			<node name="" class="ifclassnode1" use="true"/>
+			<node name="" class="ifclassnode2" use="true"/>
+			<for class="ifforclass" use="true">
+				<node name="" class="ifforclassnode1" use="true"/>
+				<node name="" class="ifforclassnode2" use="true"/>
+				<if class="ifforifclass">
+					<node name="" class="ifforifclassnode1" use="true"/>
+					<node name="" class="ifforifclassnode2" use="true"/>
+				</if>
+			</for>
+		</if>
+		<for class="forclass" use="true">
+			<node name="" class="forclassnode1" use="true"/>
+			<node name="" class="forclassnode2" use="true"/>
+		</for>
+		<while class="whileclass" use="">
+			<node name="" class="whileclassnode1" use="true"/>
+			<node name="" class="whileclassnode2" use="true"/>
+		</while>
+		
+		<thread pool="10">
+			<node name="" class="" use="true"/>
+			<node name="" class="" use="true"/>
+		</thread>
+		<subflow id="">
+		
+		</subflow>
+		
+		</flow>
+	</flows>
+	<flows use="false" name="mode2">
+		<flow id="001" name="flow1" use="true">
+		<node id="node1" name="" class="" index="1" use="true"/>
+		<node id="node2" name="" class="" index="2" use="false"/>
+		</flow>
+	</flows>
+</mbag>
+ -->
